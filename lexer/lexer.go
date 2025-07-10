@@ -1,7 +1,6 @@
 package lexer
 
 import (
-	"fmt"
 	"interpreter/token"
 )
 
@@ -48,7 +47,6 @@ func (l *Lexer) ExtractToken() token.Token {
 
 	l.eatWhitespaces()
 
-	fmt.Printf("Lexer state: %d, %d, %q\n", l.position, l.readPosition, string(l.ch))
 	switch l.ch {
 	case '=':
 		// since we have `==` for equality, we need to check next char

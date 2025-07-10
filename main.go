@@ -1,7 +1,10 @@
 package main
 
+import (
+	"interpreter/repl"
+	"os"
+)
+
 func main() {
-	// 1. token
-	// 2. lexer
-	// 3. parser
+	repl.StartInteraction(os.Stdin, os.Stdout)
 }
